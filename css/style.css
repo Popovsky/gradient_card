@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article.card {
+    --text-color: white;
+    font-family: 'Roboto', sans-serif;
+    min-width: 300px;
+    width: 1.5em;
+    min-height: 170px;
+    border-radius: 5px;
+    position: relative;
+    padding: 2em;
+    overflow: hidden;
+    display: inline-block;
+}
+
+article.card:first-child {
+    background: linear-gradient(90deg, #ffbf99, #ff8096);
+}
+
+article.card:nth-child(2) {
+    background: linear-gradient(90deg, #88c8f6, #0789e0);
+}
+
+article.card:last-child {
+    background: linear-gradient(90deg, #80d9d2, #00cfb5);
+}
+
+article.card + article.card {
+    margin-left: 1.5em;
+}
+
+article.card::before {
+    content: '';
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    background: var(--text-color);
+    opacity: 0.2;
+    position: absolute;
+    top: -1em;
+    right: -4em;
+}
+
+article.card::after {
+    content: '';
+    min-width: 170px;
+    min-height: 170px;
+    border-radius: 50%;
+    background: var(--text-color);
+    opacity: 0.2;
+    position: absolute;
+    bottom: -5.8em;
+    right: -1.6em;
+}
+
+article.card > span {
+    display: block;
+    color: var(--text-color);
+}
+
+article.card > span:first-child {
+    text-transform: capitalize;
+    font-size: 1.1em;
+}
+
+article.card > span:nth-child(2) {
+    font-size: 1.7em;
+    padding: 0.4em 0 1em;
+}
+
+article.card > span:nth-child(3)::first-letter {
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+article.card > img {
+    width: 1.5em;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+}
